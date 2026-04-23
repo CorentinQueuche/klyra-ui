@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Forms</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .field { display:flex; flex-direction:column; gap:6px; flex:1; }
+  .field label { font-size:12px; color:var(--fg-2); letter-spacing:-0.01em; }
+  .field input, .field textarea, .field select {
+    font-family: var(--font-sans); font-size:15px; letter-spacing:-0.01em; color:#000;
+    background:#fff; border:1px solid #E0E0E0; border-radius:10px;
+    padding:12px 14px; outline:none;
+  }
+  .field input:focus, .field textarea:focus { border-color:#003FE4; box-shadow:0 0 0 3px rgba(0,63,228,0.18); }
+  .chk { display:inline-flex; gap:8px; align-items:center; font-size:13px; color:#000;}
+  .chk input { width:16px; height:16px; accent-color:#003FE4;}
+</style></head>
+<body>
+<div class="card">
+  <div style="display:flex; gap:14px;">
+    <div class="field">
+      <label>Nom complet</label>
+      <input value="Corentin Queuche">
+    </div>
+    <div class="field">
+      <label>Email pro</label>
+      <input value="corentin@klyra.fr">
+    </div>
+  </div>
+  <div class="field" style="flex:unset;">
+    <label>Parle-nous de ton projet</label>
+    <textarea rows="2" style="resize:none;">Refonte du site marketing + outil interne de devis.</textarea>
+  </div>
+  <label class="chk"><input type="checkbox" checked> J'accepte la politique de confidentialité.</label>
+</div>
+</body></html>

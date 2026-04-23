@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Glass cards</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .stage { position:relative; height:260px; border-radius:0; overflow:hidden;
+    background:linear-gradient(180deg,#003FE4 0%,#000 100%);}
+  .halo1 { position:absolute; width:500px; height:500px; border-radius:50%; top:-220px; right:-140px;
+    background:radial-gradient(50% 50% at 50% 50%, rgba(1,164,255,0.6), rgba(1,164,255,0)); }
+  .glass { position:absolute; bottom:22px; left:24px; right:24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(0,63,228,0.12));
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-radius:16px; padding:16px 20px; color:#fff;
+    box-shadow: inset 2px -4px 22px rgba(0,63,228,0.25); }
+</style></head>
+<body>
+<div class="card" style="padding:0; overflow:hidden;">
+  <div class="stage">
+    <div class="halo1"></div>
+    <div class="glass">
+      <div style="font-size:11px; color:rgba(255,255,255,0.65); font-family:var(--font-mono); letter-spacing:0.03em;">ÉVOLUTION DES VENTES</div>
+      <div style="display:flex; align-items:baseline; gap:14px; margin-top:8px;">
+        <div style="font-size:34px; font-weight:700; letter-spacing:-0.03em; line-height:1;">8 547 €</div>
+        <div style="font-size:13px; color:#00DDFF; font-weight:500;">+32% vs. M-1</div>
+      </div>
+      <div style="font-size:12px; color:rgba(255,255,255,0.65); margin-top:8px;">Dashboard client · webapp sur mesure</div>
+    </div>
+  </div>
+</div>
+</body></html>

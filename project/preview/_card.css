@@ -1,0 +1,55 @@
+/* Shared look for every preview card. Target: 700 × ~auto, crop-safe. */
+@import url("../colors_and_type.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: var(--klyra-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.card {
+  width: 700px;
+  padding: 28px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.card.dark {
+  background: #000;
+  color: #fff;
+}
+.card.blue {
+  background: var(--klyra-blue-k1);
+  color: #fff;
+}
+.meta {
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--fg-3);
+  font-weight: 500;
+  text-transform: none;
+}
+.card.dark .meta, .card.blue .meta { color: rgba(255,255,255,0.55); }
+.row { display: flex; gap: 12px; align-items: stretch; }
+.swatch { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.swatch .chip {
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  align-items: flex-end;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+}
+.swatch .label {
+  font-size: 11px;
+  color: var(--fg-2);
+  display: flex;
+  justify-content: space-between;
+}
+.swatch .label strong { color: var(--fg-1); font-weight: 600; }

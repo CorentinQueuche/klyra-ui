@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Buttons on dark</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .btn { display:inline-flex; align-items:center; gap:8px; padding:14px 24px; border-radius:999px;
+    font-family:var(--font-sans); font-weight:500; font-size:15px; letter-spacing:-0.01em;
+    border:none; cursor:pointer; text-decoration:none; }
+  .btn-primary { color:#fff; background:linear-gradient(180deg,#003FE4 0%,rgba(0,63,228,0.4) 100%);
+    box-shadow: inset 6px -4px 30px rgba(1,164,255,0.35), inset -9px 6px 24px rgba(1,164,255,0.15),
+                0 10px 24px rgba(0,63,228,0.4);}
+  .btn-white { background:#fff; color:#000; }
+  .btn-ghost { background:rgba(255,255,255,0.06); color:#fff; border:1px solid rgba(255,255,255,0.2); }
+  .btn-link { color:#fff; text-decoration:underline; padding:6px 0; background:transparent; }
+  .arrow { width:10px; height:10px; position:relative; }
+  .arrow::before { content:""; position:absolute; inset:0;
+    border-top:1.5px solid currentColor; border-right:1.5px solid currentColor;
+    transform: rotate(45deg) translate(-1px,1px); }
+</style></head>
+<body>
+<div class="card dark">
+  <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+    <button class="btn btn-primary">Prendre rendez-vous</button>
+    <button class="btn btn-white">Nos réalisations</button>
+    <button class="btn btn-ghost">Démo produit</button>
+    <a href="#" class="btn btn-link">Consulter les créneaux <span class="arrow"></span></a>
+  </div>
+  <div style="font-size:12px; color:rgba(255,255,255,0.55);">Sur fond noir — mêmes composants, glow intensifié</div>
+</div>
+</body></html>

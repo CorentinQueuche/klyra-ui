@@ -1,0 +1,251 @@
+/* ==========================================================================
+   KLYRA — Colors & Type foundations
+   Source: Brand Guidelines 2026 (Figma) + LinkedIn editorial set.
+   ========================================================================== */
+
+/* Webfont: Google Sans Flex is served via fonts.google.com (CSS2 API).
+   Keep @import at top of the file. */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ------------------------------------------------------------------ */
+  /* COLOR — Palette principale (Bleus K1 / K2 / K3)                    */
+  /* ------------------------------------------------------------------ */
+  --klyra-blue-k1: #003FE4;   /* Bleu K1 — dominant, structure, sérieux */
+  --klyra-blue-k2: #01A4FF;   /* Bleu K2 — légèreté, dynamisme          */
+  --klyra-blue-k3: #00DDFF;   /* Bleu K3 — contraste, mise en avant     */
+
+  /* Shades used in editorial + gradients */
+  --klyra-blue-deep: #002DA4;  /* shadow / deep tint                    */
+  --klyra-blue-pale: #4A7CFF;  /* soft glow                             */
+  --klyra-blue-mist: #96BCFF;  /* muted tone                            */
+  --klyra-blue-bg:   #E5EEFF;  /* very pale blue surface                */
+  --klyra-blue-halo: #DBE5FF;  /* halo diffusion                        */
+
+  /* Neutrals */
+  --klyra-black:  #000000;   /* Noir                                     */
+  --klyra-ink:    #202020;   /* near-black, body text on light           */
+  --klyra-ink-2:  #303030;   /* muted dark                               */
+  --klyra-gray-k1:#E0E0E0;   /* Gris K1                                  */
+  --klyra-gray-k2:#DEDEE9;   /* Gris K2 (soft cool)                      */
+  --klyra-gray-3: #D9D9D9;   /* ligature gray                            */
+  --klyra-white:  #FFFFFF;   /* Blanc                                    */
+
+  /* Transparency tokens (per brand usage) */
+  --klyra-white-75: rgba(255,255,255,0.75);
+  --klyra-white-50: rgba(255,255,255,0.50);
+  --klyra-white-35: rgba(255,255,255,0.35);
+  --klyra-white-25: rgba(255,255,255,0.25);
+  --klyra-blue-75:  rgba(0,63,228,0.75);
+  --klyra-blue-50:  rgba(0,63,228,0.50);
+  --klyra-blue-25:  rgba(0,63,228,0.25);
+  --klyra-blue-10:  rgba(0,63,228,0.10);
+  --klyra-black-50: rgba(0,0,0,0.50);
+  --klyra-black-25: rgba(0,0,0,0.25);
+  --klyra-black-10: rgba(0,0,0,0.10);
+
+  /* ------------------------------------------------------------------ */
+  /* COLOR — Semantic (fg/bg)                                           */
+  /* ------------------------------------------------------------------ */
+  --fg-1: var(--klyra-ink);          /* primary text on light */
+  --fg-2: rgba(32,32,32,0.72);       /* secondary text on light */
+  --fg-3: rgba(32,32,32,0.50);       /* tertiary / labels */
+  --fg-on-dark-1: var(--klyra-white);
+  --fg-on-dark-2: var(--klyra-white-75);
+  --fg-on-dark-3: var(--klyra-white-35);
+
+  --bg-1: var(--klyra-white);        /* default light surface */
+  --bg-2: #FAFAFB;                   /* subtle surface */
+  --bg-3: var(--klyra-gray-k1);      /* neutral panel */
+  --bg-dark-1: var(--klyra-black);   /* primary dark surface */
+  --bg-dark-2: var(--klyra-ink);     /* dark panel */
+  --bg-brand: var(--klyra-blue-k1);  /* full-brand surface */
+
+  --border-1: var(--klyra-gray-k1);
+  --border-2: rgba(0,0,0,0.08);
+  --border-on-dark: rgba(255,255,255,0.12);
+
+  --accent:      var(--klyra-blue-k1);
+  --accent-hi:   var(--klyra-blue-k2);
+  --accent-peak: var(--klyra-blue-k3);
+
+  /* ------------------------------------------------------------------ */
+  /* GRADIENTS — brand-sanctioned                                       */
+  /* ------------------------------------------------------------------ */
+  --grad-deep:    linear-gradient(180deg, #003FE4 0%, #000000 100%);   /* Noir ← Bleu K1 */
+  --grad-bright:  linear-gradient(180deg, #003FE4 0%, #01A4FF 100%);   /* Bleu K1 → K2  */
+  --grad-ink:     linear-gradient(180deg, #000000 0%, #202020 100%);   /* Noir → Gris K1 ink */
+  --grad-paper:   linear-gradient(180deg, #E0E0E0 0%, #FFFFFF 100%);   /* Gris K2 → Blanc */
+  --grad-halo:    radial-gradient(50% 50% at 50% 50%, rgba(0,63,228,0.75) 0%, rgba(0,63,228,0) 70%);
+  --grad-halo-k2: radial-gradient(50% 50% at 50% 50%, rgba(1,164,255,0.75) 0%, rgba(1,164,255,0) 70%);
+  --grad-cta:     linear-gradient(180deg, #003FE4 0%, rgba(0,63,228,0.25) 100%);
+
+  /* ------------------------------------------------------------------ */
+  /* TYPE — Families                                                    */
+  /* Google Sans Flex is the brand face; Google Sans is the public      */
+  /* equivalent on fonts.google.com (same metrics within 1%).           */
+  /* ------------------------------------------------------------------ */
+  --font-sans: "Google Sans Flex", "Google Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-ui:   "Inter", "Google Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+
+  /* Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Letter-spacing tokens (source: BG p.21) */
+  --ls-display: -0.05em;   /* -5%  Display */
+  --ls-title:   -0.0325em; /* -3.25% Titre */
+  --ls-body:   -0.0125em;  /* -1.25% Paragraphe */
+  --ls-micro:   0em;       /* 0%    Mentions */
+
+  /* Line-height tokens */
+  --lh-display: 0.925;     /*  92.5% */
+  --lh-title:   0.9;       /*  90%   */
+  --lh-tight:   1.0;       /* 100%  */
+  --lh-body:    1.4;       /* 140%  */
+
+  /* Size scale (px, 1920 frame) */
+  --fs-display-xl: 160px;  /* huge hero numerals */
+  --fs-display-l: 105px;   /* hero headline */
+  --fs-display-m: 70px;    /* medium display */
+  --fs-display-s: 60px;    /* numerals 2026 / section markers */
+  --fs-h1: 48px;
+  --fs-h2: 40px;
+  --fs-h3: 28px;
+  --fs-h4: 24px;
+  --fs-body-l: 22px;
+  --fs-body:   18px;
+  --fs-body-s: 16px;
+  --fs-caption:14px;
+  --fs-micro:  12px;
+
+  /* Radii */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* Shadow system (inner-shadow driven — signature KLYRA gloss) */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 1px rgba(0,0,0,0.04);
+  --shadow-md: 0 6px 18px rgba(0,45,164,0.10), 0 2px 6px rgba(0,45,164,0.05);
+  --shadow-lg: 0 22px 60px rgba(0,45,164,0.28), 0 8px 20px rgba(0,45,164,0.08);
+  --shadow-cta: inset 8px -5px 41px rgba(1,164,255,0.25),
+                inset -12px 8px 33px rgba(1,164,255,0.10),
+                0 10px 30px rgba(0,63,228,0.35);
+  --shadow-glass: inset 2px -4px 22px rgba(0,63,228,0.25);
+
+  /* Spacing (4-pt grid; brand uses 52px gutters on 1920 frames) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-13: 52px;  /* signature brand margin */
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur-med:  220ms;
+  --dur-slow: 480ms;
+}
+
+/* --------------------------------------------------------------------- */
+/* Semantic element defaults                                             */
+/* --------------------------------------------------------------------- */
+html, body {
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  background: var(--bg-1);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.klyra-display-xl {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-display-xl);
+  line-height: var(--lh-title);
+  letter-spacing: var(--ls-title);
+}
+.klyra-display {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-display-l);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+}
+.klyra-display-m {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-display-m);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+}
+.klyra-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-title);
+  letter-spacing: var(--ls-title);
+}
+.klyra-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-title);
+  letter-spacing: var(--ls-title);
+}
+.klyra-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+  letter-spacing: var(--ls-title);
+}
+.klyra-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-body);
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+}
+.klyra-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body-l);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+}
+.klyra-body-s {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body-s);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+}
+.klyra-caption {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-caption);
+  line-height: 1.2;
+  letter-spacing: var(--ls-micro);
+}
+.klyra-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

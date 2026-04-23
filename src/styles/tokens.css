@@ -1,0 +1,170 @@
+/* ==========================================================================
+   KLYRA — Design tokens (rebrand 2026)
+   Source: Brand Guidelines 2026 (Figma) + LinkedIn editorial set.
+   Exposed as Tailwind v4 theme tokens via @theme inline.
+
+   Usage :
+     @import "tailwindcss";
+     @import "klyra-ui/styles/fonts.css";   // si fonts self-hosted
+     @import "klyra-ui/styles/tokens.css";
+   ========================================================================== */
+
+@theme inline {
+  /* ---- PALETTE — 3 bleus KLYRA -------------------------------------- */
+  --color-k1: #003FE4;
+  --color-k2: #01A4FF;
+  --color-k3: #00DDFF;
+  --color-blue-deep: #002DA4;
+  --color-blue-pale: #4A7CFF;
+  --color-blue-mist: #96BCFF;
+  --color-blue-bg:   #E5EEFF;
+  --color-blue-halo: #DBE5FF;
+
+  /* ---- Neutrals ----------------------------------------------------- */
+  --color-black: #000000;
+  --color-ink:   #202020;
+  --color-ink-2: #303030;
+  --color-gray-k1: #E0E0E0;
+  --color-gray-k2: #DEDEE9;
+  --color-gray-3:  #D9D9D9;
+  --color-white:   #FFFFFF;
+  --color-paper:   #FAFAFB;
+
+  /* ---- Semantic ----------------------------------------------------- */
+  --color-fg-1: #202020;
+  --color-fg-2: rgba(32, 32, 32, 0.72);
+  --color-fg-3: rgba(32, 32, 32, 0.50);
+  --color-fg-on-dark-1: #FFFFFF;
+  --color-fg-on-dark-2: rgba(255, 255, 255, 0.75);
+  --color-fg-on-dark-3: rgba(255, 255, 255, 0.35);
+  --color-border-1: #E0E0E0;
+  --color-border-2: rgba(0, 0, 0, 0.08);
+  --color-border-on-dark: rgba(255, 255, 255, 0.12);
+
+  /* ---- Typography --------------------------------------------------- */
+  --font-sans: var(--font-google-sans-flex, "Google Sans Flex"), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+
+  /* Letter-spacing tokens (BG p.21) */
+  --tracking-display: -0.05em;    /* Display */
+  --tracking-title:   -0.0325em;  /* Titre */
+  --tracking-body:    -0.0125em;  /* Paragraphe */
+  --tracking-micro:   0em;
+
+  /* Line-height */
+  --leading-display: 0.925;
+  --leading-title:   0.9;
+  --leading-tight:   1;
+  --leading-body:    1.4;
+
+  /* Size scale (1920 frame) */
+  --text-display-xl: 160px;
+  --text-display-l:  105px;
+  --text-display-m:  70px;
+  --text-display-s:  60px;
+  --text-h1: 48px;
+  --text-h2: 40px;
+  --text-h3: 28px;
+  --text-h4: 24px;
+  --text-body-l: 22px;
+  --text-body:   18px;
+  --text-body-s: 16px;
+  --text-caption: 14px;
+  --text-micro:   12px;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* Spacing — 4pt grid + signature 52 px brand gutter */
+  --spacing-gutter: 52px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-med:  220ms;
+  --duration-slow: 480ms;
+}
+
+/* ---- Base ----------------------------------------------------------- */
+:root {
+  /* Transparency raw values (kept outside @theme for direct rgba use) */
+  --klyra-white-75: rgba(255, 255, 255, 0.75);
+  --klyra-white-50: rgba(255, 255, 255, 0.50);
+  --klyra-white-35: rgba(255, 255, 255, 0.35);
+  --klyra-white-25: rgba(255, 255, 255, 0.25);
+  --klyra-blue-75:  rgba(0, 63, 228, 0.75);
+  --klyra-blue-50:  rgba(0, 63, 228, 0.50);
+  --klyra-blue-25:  rgba(0, 63, 228, 0.25);
+  --klyra-blue-10:  rgba(0, 63, 228, 0.10);
+
+  /* Brand-sanctioned gradients */
+  --grad-deep:   linear-gradient(180deg, #003FE4 0%, #000000 100%);
+  --grad-bright: linear-gradient(180deg, #003FE4 0%, #01A4FF 100%);
+  --grad-ink:    linear-gradient(180deg, #000000 0%, #202020 100%);
+  --grad-paper:  linear-gradient(180deg, #E0E0E0 0%, #FFFFFF 100%);
+  --grad-cta:    linear-gradient(180deg, #003FE4 0%, rgba(0, 63, 228, 0.25) 100%);
+  --grad-halo-k1: radial-gradient(50% 50% at 50% 50%, rgba(0, 63, 228, 0.75) 0%, rgba(0, 63, 228, 0) 70%);
+  --grad-halo-k2: radial-gradient(50% 50% at 50% 50%, rgba(1, 164, 255, 0.75) 0%, rgba(1, 164, 255, 0) 70%);
+
+  /* Shadow system — inner-shadow driven */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 18px rgba(0, 45, 164, 0.10), 0 2px 6px rgba(0, 45, 164, 0.05);
+  --shadow-lg: 0 22px 60px rgba(0, 45, 164, 0.28), 0 8px 20px rgba(0, 45, 164, 0.08);
+  --shadow-cta: inset 8px -5px 41px rgba(1, 164, 255, 0.25),
+                inset -12px 8px 33px rgba(1, 164, 255, 0.10),
+                0 10px 30px rgba(0, 63, 228, 0.35);
+  --shadow-cta-hover: inset 8px -5px 41px rgba(1, 164, 255, 0.40),
+                     inset -12px 8px 33px rgba(1, 164, 255, 0.18),
+                     0 14px 38px rgba(0, 63, 228, 0.48);
+  --shadow-glass: inset 2px -4px 22px rgba(0, 63, 228, 0.25);
+}
+
+html, body {
+  font-family: var(--font-google-sans-flex, "Google Sans Flex"), system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #202020;
+  background: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  letter-spacing: -0.0125em;
+}
+
+/* Utility: brand gradients reachable via Tailwind arbitrary values + classes */
+.klyra-grad-deep   { background: var(--grad-deep); }
+.klyra-grad-bright { background: var(--grad-bright); }
+.klyra-grad-ink    { background: var(--grad-ink); }
+.klyra-grad-paper  { background: var(--grad-paper); }
+.klyra-grad-cta    { background: var(--grad-cta); }
+
+.klyra-shadow-sm  { box-shadow: var(--shadow-sm); }
+.klyra-shadow-md  { box-shadow: var(--shadow-md); }
+.klyra-shadow-lg  { box-shadow: var(--shadow-lg); }
+.klyra-shadow-cta { box-shadow: var(--shadow-cta); }
+.klyra-shadow-cta-hover { box-shadow: var(--shadow-cta-hover); }
+.klyra-shadow-glass { box-shadow: var(--shadow-glass); }
+
+/* Text helpers */
+.klyra-mono { font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace; font-variant-numeric: tabular-nums; }
+
+/* Focus ring — brand-blue, WCAG AA */
+.klyra-focus:focus-visible,
+:where(button, a, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-k1);
+  outline-offset: 2px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Badges</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px;
+    font-family:var(--font-sans); font-weight:500; font-size:13px; letter-spacing:-0.01em;}
+  .dot { width:6px; height:6px; border-radius:50%; }
+</style></head>
+<body>
+<div class="card">
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <span class="pill" style="background:#003FE4;color:#fff;">Branding</span>
+    <span class="pill" style="background:#01A4FF;color:#fff;">Web Design</span>
+    <span class="pill" style="background:#00DDFF;color:#002DA4;">Développement</span>
+    <span class="pill" style="background:rgba(0,63,228,0.1);color:#003FE4;">Maintenance</span>
+    <span class="pill" style="background:#202020;color:#fff;">Labs</span>
+    <span class="pill" style="background:#E0E0E0;color:#202020;">En cours</span>
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <span class="pill" style="background:rgba(0,63,228,0.08);color:#003FE4;"><span class="dot" style="background:#003FE4;"></span> Nouveau</span>
+    <span class="pill" style="background:rgba(0,221,255,0.2);color:#002DA4;"><span class="dot" style="background:#00DDFF;"></span> Bêta</span>
+    <span class="pill" style="background:#F2F2F2;color:#202020;">+20 entreprises nous font confiance</span>
+  </div>
+  <div style="font-size:12px; color:var(--fg-2);">Pills · badge capabilities · pill-tags avec dot</div>
+</div>
+</body></html>

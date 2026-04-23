@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Shadows</title>
+<link rel="stylesheet" href="_card.css">
+<style>
+  .tile { background:#fff; border-radius:14px; width:180px; height:110px;
+    display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--fg-2); }
+</style></head>
+<body>
+<div class="card" style="background:#FAFAFB;">
+  <div style="display:flex; gap:22px; flex-wrap:wrap;">
+    <div style="display:flex; flex-direction:column; gap:8px; align-items:center;">
+      <div class="tile" style="box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 1px 1px rgba(0,0,0,0.04);">shadow-sm</div>
+      <div style="font-size:11px; color:var(--fg-3);">subtil, UI inputs</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; align-items:center;">
+      <div class="tile" style="box-shadow: 0 6px 18px rgba(0,45,164,0.1), 0 2px 6px rgba(0,45,164,0.05);">shadow-md</div>
+      <div style="font-size:11px; color:var(--fg-3);">cards · teinte bleue</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; align-items:center;">
+      <div class="tile" style="box-shadow: 0 22px 60px rgba(0,45,164,0.28), 0 8px 20px rgba(0,45,164,0.08);">shadow-lg</div>
+      <div style="font-size:11px; color:var(--fg-3);">hero · élévation</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; align-items:center;">
+      <div class="tile" style="background:linear-gradient(180deg,#003FE4,rgba(0,63,228,0.4)); color:#fff; box-shadow: inset 8px -5px 41px rgba(1,164,255,0.28), inset -12px 8px 33px rgba(1,164,255,0.12), 0 10px 30px rgba(0,63,228,0.35);">inner-glow</div>
+      <div style="font-size:11px; color:var(--fg-3);">signature CTA · inset</div>
+    </div>
+  </div>
+</div>
+</body></html>

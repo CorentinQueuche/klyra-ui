@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(mkdir -p /tmp/design)",
+      "Read(//tmp/**)",
+      "Bash(cp \"C:\\\\Users\\\\queuc\\\\.claude\\\\projects\\\\C--Users-queuc-Documents-projects-KLYRA-designsystem\\\\cded4ffa-22b7-491a-9114-9546e78b4767\\\\tool-results\\\\webfetch-1776733664157-dgtrss.bin\" design.tar.gz)",
+      "Bash(tar -xzf design.tar.gz)",
+      "Bash(cp *)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm build *)",
+      "Bash(pnpm dev *)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_press_key",
+      "mcp__playwright__browser_type",
+      "mcp__playwright__browser_close",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"vite\")",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_snapshot",
+      "Bash(pkill -f vite)",
+      "Bash(git *)",
+      "mcp__playwright__browser_evaluate",
+      "Bash(pnpm storybook *)",
+      "Bash(pnpm *)"
+    ]
+  }
+}
