@@ -80,7 +80,9 @@ export function Typography({
     {
       className: cn("klyra-type", className),
       style: {
-        margin: 0,
+        // margin: 0 retiré (laissait l'inline style écraser mx-auto Tailwind
+        // utilisé par les consommateurs pour centrer un bloc texte). Tailwind
+        // preflight gère déjà le reset des marges des h1/p, donc inutile ici.
         fontFamily: variant === "eyebrow" ? "var(--font-mono)" : "inherit",
         textWrap: balance ? "balance" : undefined,
         ...styleMap[variant],
